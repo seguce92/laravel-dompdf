@@ -1,0 +1,24 @@
+{
+    "name": "seguce92/laravel-dompdf",
+    "description": "A DOMPDF Wrapper for Laravel mod barryvdh/laravel-dompdf package",
+    "license": "MIT",
+    "keywords": ["laravel", "dompdf", "pdf"],
+    "authors": [
+        {
+            "name": "Sergio G. Cruz Espinoza",
+            "email": "micorreoseguce@gmail.com",
+            ""
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.0.x|5.1.x|5.2.x",
+        "dompdf/dompdf": "0.6.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Seguce92\\DomPDF\\": "src"
+        }
+    }
+}
