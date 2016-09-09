@@ -63,7 +63,7 @@ You can add watermarks of type image and text
 
     $pdf = App::make('dompdf.wrapper');
     $pdf->setWatermarkText('example', '150px');
-    $pdf->loadHTML('<h1>Test</h1>');
+    $pdf->loadHTML('<h1>example</h1>');
     return $pdf->stream();
 
 Methods property
