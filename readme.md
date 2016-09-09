@@ -60,15 +60,16 @@ You can add watermarks of type image and text
     return $pdf->stream();
 
   - NOTE: enable "DOMPDF_ENABLE_FONTSUBSETTING" => true, in `app/config/dompdf.php` for correct operation of setWatermarkText [size change]
-
+    ```php
     $pdf = App::make('dompdf.wrapper');
     $pdf->setWatermarkText('example', '150px');
     $pdf->loadHTML('<h1>example</h1>');
     return $pdf->stream();
+    ```
 
 Methods property
   - setWatermarkImage
-    
+    ```php
     $pdf->setWatermarkImage($image, $opacity = 0.6, $top = '30%', $width = '100%', $height = '100%');
 
     $image = path to image file *.png, *.jpeg, ect
@@ -86,6 +87,7 @@ Methods property
     $opacity = values accept 1.0 - 0.11111
     $rotate = rotation text in deg values  (css transform-rotate
     $top = margin respect to top page
+    ```
 
 If you need the output as a string, you can get the rendered PDF with the output() function, so you can save/output it yourself.
 
