@@ -33,7 +33,7 @@ class PDF{
     protected $paper;
     protected $showWarnings;
     protected $public_path;
-    protected $watermark = '</body>';
+    protected $watermark = null;
 
     /**
      * @param \DOMPDF $dompdf
@@ -134,7 +134,8 @@ class PDF{
      * @return static
      */
     public function loadHTML($string, $encoding = null){
-        $string = str_replace('</body>', $this->watermark.'</body>', $string);
+        if($this->watermark != null)
+            $string = str_replace('</body>', $this->watermark.'</body>', $string);
         $string = $this->convertEntities($string);
         $this->dompdf->load_html($string, $encoding);
         $this->rendered = false;
