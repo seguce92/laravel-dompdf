@@ -54,12 +54,14 @@ You can change the orientation and paper size, and hide or show errors (by defau
 
 You can add watermarks of type image and text
 
+    ```php
     $pdf = App::make('dompdf.wrapper');
     $pdf->setWatermarkImage('path/to/image.png');
     $pdf->loadHTML('<h1>Test</h1>');
     return $pdf->stream();
-
-  - NOTE: enable "DOMPDF_ENABLE_FONTSUBSETTING" => true, in `app/config/dompdf.php` for correct operation of setWatermarkText [size change]
+    ```
+NOTE: enable "DOMPDF_ENABLE_FONTSUBSETTING" => true, in `app/config/dompdf.php` for correct operation of setWatermarkText [size change]
+    
     ```php
     $pdf = App::make('dompdf.wrapper');
     $pdf->setWatermarkText('example', '150px');
@@ -69,9 +71,12 @@ You can add watermarks of type image and text
 
 Methods property
   - setWatermarkImage
+    
     ```php
     $pdf->setWatermarkImage($image, $opacity = 0.6, $top = '30%', $width = '100%', $height = '100%');
+    ```
 
+    ```php
     $image = path to image file *.png, *.jpeg, ect
     $opacity = values accept 1.0 - 0.11111
     $top = margin respect to top page
@@ -79,9 +84,12 @@ Methods property
     $height = size image height
 
   - setWatermarkText
-
+    
+    ```php
     $pdf->setWatermarkText($text, $size = '100px', $opacity = 0.6, $rotate = '10deg', $top = '30%')
-
+    ```
+    
+    ```php
     $text = text a view with watermark
     $size = font size 
     $opacity = values accept 1.0 - 0.11111
