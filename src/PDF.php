@@ -1,7 +1,7 @@
 <?php
 namespace Seguce92\DomPDF;
 
-use DOMPDF;
+use Dompdf\Dompdf;
 use Exception;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\Factory as ViewFactory;
@@ -41,22 +41,13 @@ class PDF{
      * @param \Illuminate\Filesystem\Filesystem $files
      * @param \Illuminate\View\Factory $view
      */
-    public function __construct(DOMPDF $dompdf, ConfigRepository $config, Filesystem $files, ViewFactory $view){
+    public function __construct(Dompdf $dompdf, ConfigRepository $config, Filesystem $files, ViewFactory $view){
         $this->dompdf = $dompdf;
         $this->config = $config;
         $this->files = $files;
         $this->view = $view;
 
         $this->showWarnings = $this->config->get('dompdf.show_warnings', false);
-
-        //To prevent old configs from not working..
-        if($this->config->has('dompdf.paper')){
-            $this->paper = $this->config->get('dompdf.paper');
-        }else{
-            $this->paper = DOMPDF_DEFAULT_PAPER_SIZE;
-        }
-
-        $this->orientation = $this->config->get('dompdf.orientation') ?: 'portrait';
     }
 
     /**
@@ -80,17 +71,6 @@ class PDF{
         if($orientation){
             $this->orientation = $orientation;
         }
-        return $this;
-    }
-
-    /**
-     * Set the orientation (default portrait)
-     *
-     * @param string $orientation
-     * @return static
-     */
-    public function setOrientation($orientation){
-        $this->orientation = $orientation;
         return $this;
     }
 
@@ -270,6 +250,7 @@ class PDF{
     protected function convertEntities($subject){
         $entities = array(
             '€' => '&#0128;',
+            '£' => '&pound;',
         );
 
         foreach($entities as $search => $replace){

@@ -87,7 +87,7 @@ return array(
         /**
          * Whether to enable font subsetting or not.
          */
-        "DOMPDF_ENABLE_FONTSUBSETTING" => true,
+        "DOMPDF_ENABLE_FONT_SUBSETTING" => false,
 
         /**
          * The PDF rendering backend to use
@@ -152,7 +152,7 @@ return array(
          *
          * @see CPDF_Adapter::PAPER_SIZES for valid sizes ('letter', 'legal', 'A4', etc.)
          */
-        "DOMPDF_DEFAULT_PAPER_SIZE" => "letter",
+        "DOMPDF_DEFAULT_PAPER_SIZE" => "a4",
 
         /**
          * The default font family
@@ -160,7 +160,7 @@ return array(
          * Used if no suitable fonts can be found. This must exist in the font folder.
          * @var string
          */
-        "DOMPDF_DEFAULT_FONT" => "times",
+        "DOMPDF_DEFAULT_FONT" => "serif",
 
         /**
          * Image DPI setting
@@ -209,7 +209,7 @@ return array(
          *
          * @var bool
          */
-        "DOMPDF_ENABLE_PHP" => true,
+        "DOMPDF_ENABLE_PHP" => false,
 
         /**
          * Enable inline Javascript
