@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.9",
         "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x",
-        "dompdf/dompdf": "0.7.*"
+        "dompdf/dompdf": "^0.7"
     },
 
     "autoload": {
