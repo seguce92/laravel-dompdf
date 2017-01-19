@@ -6,14 +6,19 @@ use Illuminate\Support\Facades\Facade as IlluminateFacade;
 class Facade extends IlluminateFacade {
 
     /**
-     * Get the registered name of the component.
-     *
-     * @return string
+     * [getFacadeAccessor description]
+     * @method getFacadeAccessor
+     * @return [Strin]            [string]
      */
     protected static function getFacadeAccessor() { return 'dompdf.wrapper'; }
 
     /**
-     * Resolve a new instance
+     * Resolve a new Instance
+     * [__callStatic description]
+     * @method __callStatic
+     * @param  [type]       $method [description]
+     * @param  [type]       $args   [description]
+     * @return [type]               [description]
      */
     public static function __callStatic($method, $args)
     {

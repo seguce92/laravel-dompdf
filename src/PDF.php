@@ -86,7 +86,7 @@ class PDF{
     }
 
     /**
-     * Add watermark 
+     * Add watermark
      */
     public function setWatermarkImage($image, $opacity = 0.6, $top = '30%', $width = '100%', $height = '100%'){
         $html = '<div style="position: fixed;
@@ -105,7 +105,7 @@ class PDF{
     }
 
     /**
-     * Add watermark 
+     * Add watermark
      */
     public function setWatermarkText($text, $size = '100px', $opacity = 0.6, $rotate = '10deg', $top = '30%'){
         $html = '<div style="position: fixed;
@@ -218,9 +218,10 @@ class PDF{
             'Content-Disposition' =>  'inline; filename="'.$filename.'"',
         ));
     }
-
     /**
-     * Render the PDF
+     * [render description]
+     * @method render
+     * @return [string] [html string]
      */
     protected function render(){
         if(!$this->dompdf){
@@ -247,7 +248,12 @@ class PDF{
         $this->rendered = true;
     }
 
-
+    /**
+     * [convertEntities description]
+     * @method convertEntities
+     * @param  [String]          $subject [String]
+     * @return [String]                   [String]
+     */
     protected function convertEntities($subject){
         $entities = array(
             '€' => '&#0128;',

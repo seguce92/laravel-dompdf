@@ -1,12 +1,13 @@
 {
     "name": "seguce92/laravel-dompdf",
-    "description": "A DOMPDF Wrapper for Laravel mod barryvdh/laravel-dompdf package",
+    "description": "A DOMPDF Wrapper for Laravel forks barryvdh/laravel-dompdf package",
     "license": "MIT",
     "keywords": ["laravel", "dompdf", "pdf"],
     "authors": [
         {
-            "name": "Sergio G. Cruz Espinoza",
-            "email": "micorreoseguce@gmail.com"
+            "name": "Sergio Gualberto Cruz Espinoza",
+            "email": "micorreoseguce@gmail.com",
+            "homepage": "https://mascodigo.net/"
         }
     ],
     "require": {
