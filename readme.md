@@ -24,13 +24,13 @@ After updating composer add the following lines to register provider in `bootstr
   ```php
   $app->register(\Seguce92\DomPDF\ServiceProvider::class);
   ```
-  
+
 To change the configuration, copy the config file to your config folder and enable it in `bootstrap/app.php`:
 
   ```php
   $app->configure('dompdf');
   ```
-  
+
 ## Using
 
 You can create a new DOMPDF instance and load a HTML string, file or view name. You can save it to a file, or stream (show in browser) or download.
@@ -61,7 +61,7 @@ You can add watermarks of type image and text
     return $pdf->stream();
     ```
 NOTE: enable "DOMPDF_ENABLE_FONTSUBSETTING" => true, in `app/config/dompdf.php` for correct operation of setWatermarkText [size change]
-    
+
     ```php
     $pdf = App::make('dompdf.wrapper');
     $pdf->setWatermarkText('example', '150px');
@@ -71,7 +71,7 @@ NOTE: enable "DOMPDF_ENABLE_FONTSUBSETTING" => true, in `app/config/dompdf.php` 
 
 Methods property
   - setWatermarkImage
-    
+
     ```php
     $pdf->setWatermarkImage($image, $opacity = 0.6, $top = '30%', $width = '100%', $height = '100%');
     ```
@@ -84,14 +84,14 @@ Methods property
     $height = size image height
 
   - setWatermarkText
-    
+
     ```php
     $pdf->setWatermarkText($text, $size = '100px', $opacity = 0.6, $rotate = '10deg', $top = '30%')
     ```
-    
+
     ```php
     $text = text a view with watermark
-    $size = font size 
+    $size = font size
     $opacity = values accept 1.0 - 0.11111
     $rotate = rotation text in deg values  (css transform-rotate
     $top = margin respect to top page
