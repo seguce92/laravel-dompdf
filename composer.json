@@ -12,13 +12,22 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x|5.4.x",
+        "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x|5.4.x|5.5.x",
         "dompdf/dompdf": "^0.7"
     },
-
     "autoload": {
         "psr-4": {
             "Seguce92\\DomPDF\\": "src"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Seguce92\\DomPDF\\ServiceProvider"
+            ],
+            "aliases": [
+                "Seguce92\\DomPDF\\Facade"
+            ]
+        }
+    },
 }
