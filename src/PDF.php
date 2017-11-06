@@ -219,9 +219,8 @@ class PDF{
         ));
     }
     /**
-     * [render description]
      * @method render
-     * @return [string] [html string]
+     * @return string [html string]
      */
     protected function render(){
         if(!$this->dompdf){
@@ -234,7 +233,7 @@ class PDF{
 
         if ( $this->showWarnings ) {
             global $_dompdf_warnings;
-            if(count($_dompdf_warnings)){
+            if(!empty($_dompdf_warnings) && count($_dompdf_warnings)){
                 $warnings = '';
                 foreach ($_dompdf_warnings as $msg){
                     $warnings .= $msg . "\n";
@@ -249,10 +248,9 @@ class PDF{
     }
 
     /**
-     * [convertEntities description]
      * @method convertEntities
-     * @param  [String]          $subject [String]
-     * @return [String]                   [String]
+     * @param  string          $subject [String]
+     * @return string                   [String]
      */
     protected function convertEntities($subject){
         $entities = array(

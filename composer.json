@@ -6,14 +6,14 @@
     "authors": [
         {
             "name": "Sergio Gualberto Cruz Espinoza",
-            "email": "micorreoseguce@gmail.com",
-            "homepage": "https://mascodigo.net/"
+            "email": "seguce92@gmail.com",
+            "homepage": "http://mascodigo.net/"
         }
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x|5.4.x|5.5.x",
-        "dompdf/dompdf": "^0.7"
+        "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x",
+        "dompdf/dompdf": "^0.8"
     },
     "autoload": {
         "psr-4": {
