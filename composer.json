@@ -2,17 +2,18 @@
     "name": "seguce92/laravel-dompdf",
     "description": "A DOMPDF Wrapper for Laravel forks barryvdh/laravel-dompdf package",
     "license": "MIT",
+    "type": "library",
     "keywords": ["laravel", "dompdf", "pdf"],
     "authors": [
         {
             "name": "Sergio Gualberto Cruz Espinoza",
             "email": "seguce92@gmail.com",
-            "homepage": "https://mascodigo.net/"
+            "homepage": "https://sergiocruzes.com/"
         }
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x",
+        "illuminate/support": "5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x|5.7.x|5.8.x",
         "dompdf/dompdf": "^0.8"
     },
     "autoload": {
